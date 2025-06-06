@@ -15,5 +15,7 @@ namespace WebProductos.Models
         public bool Disponible { get; set; }
         public string Ventas { get; set; }
         public int NumeroVentas { get; set; }
+        public string Sucursal { get; set; }
+        public string DireccionSucursal { get; set; }
     }
 }
