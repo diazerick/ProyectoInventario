@@ -13,5 +13,7 @@ namespace WebProductos.Models
         public decimal Precio { get; set; }
         public DateTime FechaIngreso { get; set; }
         public bool Disponible { get; set; }
+        public string Ventas { get; set; }
+        public int NumeroVentas { get; set; }
     }
 }
