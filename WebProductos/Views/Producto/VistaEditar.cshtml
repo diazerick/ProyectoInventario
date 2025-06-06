@@ -1,0 +1,61 @@
+﻿@using WebProductos.Models
+
+@model E_Producto
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VistaEditar</title>
+</head>
+<body>
+    <div>
+        <h1>Editar Producto:  </h1>
+
+        <form action="/Producto/Editar" method="post">
+            <input type="hidden" name="IdProducto" value="@Model.IdProducto"/>
+
+            <label>Descripcion</label>
+            <input type="text" name="Descripcion" value="@Model.Descripcion" />
+
+            <br /><br />
+            <label>Precio</label>
+            <input type="text" name="Precio" value="@Model.Precio" />
+
+            <br /><br />
+            <label>Fecha Ingreso</label>
+            <input type="date" name="FechaIngreso" value="@Model.FechaIngreso.ToString("yyyy-MM-dd")" />
+
+            <br /><br />
+            <label>¿Esta Disponible?</label>
+            @if (Model.Disponible == true)
+            {
+                <div>
+                    <input type="radio" name="Disponible" value="true" checked />
+                    <label>Si</label>
+
+                    <input type="radio" name="Disponible" value="false" />
+                    <label>No</label>
+                </div>
+            }
+            else
+            {
+                <div>
+                    <input type="radio" name="Disponible" value="true" />
+                    <label>Si</label>
+
+                    <input type="radio" name="Disponible" value="false" checked />
+                    <label>No</label>
+                </div>
+            }
+            <br />
+            <input type="submit" value="Editar" />
+        </form>
+    </div>
+</body>
+</html>
