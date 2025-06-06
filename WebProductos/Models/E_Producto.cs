@@ -14,6 +14,11 @@ namespace WebProductos.Models
         public DateTime FechaIngreso { get; set; }
         public bool Disponible { get; set; }
         public string Ventas { get; set; }
+
+        public int IdCliente { get; set; }
+
         public int NumeroVentas { get; set; }
+
+        public string NombreCliente { get; set; }
     }
 }
