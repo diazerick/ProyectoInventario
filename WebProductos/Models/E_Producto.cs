@@ -16,9 +16,11 @@ namespace WebProductos.Models
         public string Ventas { get; set; }
 
         public int IdCliente { get; set; }
+        public string NombreCliente { get; set; }
 
         public int NumeroVentas { get; set; }
 
-        public string NombreCliente { get; set; }
+        public string Sucursal { get; set; }
+        public string DireccionSucursal { get; set; }
     }
 }
